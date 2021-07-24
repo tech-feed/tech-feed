@@ -9,9 +9,11 @@ const HomePage = () => {
   return (
     <Page pageTitle={intl.formatMessage({ id: 'home' })}>
       <Scrollbar
-        style={{ height: '100%', width: '100%', display: 'flex', flex: 1 }}
+        style={{ height: '100%', width: '100%', display: 'flex', flex: 1, padding: 10 }}
       >
-        {intl.formatMessage({ id: 'home' })}
+        <div style={{ height: '100%', width: '100%', display: 'flex', flex: 1, padding: '5%' }}>
+          VINICIUS
+        </div>
       </Scrollbar>
     </Page>
   )
