@@ -1,6 +1,6 @@
-import Avatar from '@material-ui/core/Avatar'
+/* eslint-disable no-unused-vars */
+
 import Camera from '@material-ui/icons/CameraAlt'
-import Delete from '@material-ui/icons/Delete'
 import Fab from '@material-ui/core/Fab'
 import InputBase from '@material-ui/core/InputBase'
 import Page from 'material-ui-shell/lib/containers/Page/Page'
@@ -16,9 +16,9 @@ import 'typeface-poppins'
 
 const UploadPragas = () => {
   const intl = useIntl()
-  const { openDialog } = useQuestions()
+  // const { openDialog } = useQuestions()
 
-  const { auth, updateAuth, setAuth } = useAuth()
+  const { auth, updateAuth } = useAuth()
   const {
     photoURL: currentPhoroURL = '',
     displayName: currentDisplayName = '',
@@ -117,7 +117,6 @@ const UploadPragas = () => {
         </Paper>
         {
         <ImgageUploadDialog
-            isOpen={isImageDialogOpen}
             isOpen={isImageDialogOpen}
             style={{height: '50%', width: '30%', position:'relative' }}
             handleClose={() => setImageDialogOpen(false)}

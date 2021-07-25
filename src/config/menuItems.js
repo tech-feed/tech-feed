@@ -1,13 +1,9 @@
 import React from 'react'
 import {
   AccountBox as AccountBoxIcon,
-  ChatBubble,
   ChromeReaderMode,
   Home as HomeIcon,
   ExitToApp as ExitToAppIcon,
-  FilterList,
-  FormatTextdirectionRToL as RTLIcon,
-  FormatTextdirectionLToR as LTRIcon,
   GetApp,
   InfoOutlined,
   Notifications as NotificationIcon,
@@ -16,12 +12,8 @@ import {
   Language as LanguageIcon,
   Lock as LockIcon,
   MenuOpen as MenuOpenIcon,
-  QuestionAnswer,
   SettingsApplications as SettingsIcon,
   Style as StyleIcon,
-  Tab,
-  ViewList,
-  Web,
 } from '@material-ui/icons'
 
 import allLocales from './locales'
@@ -44,7 +36,7 @@ const getMenuItems = (props) => {
     isAuthMenuOpen,
     isMiniSwitchVisibility,
   } = menuContext
-  const { themeID, setThemeID, isRTL, toggleThisTheme } = themeContext
+  const { themeID, setThemeID } = themeContext
 
   const { auth, setAuth } = authData
   const { isAppInstallable, isAppInstalled, deferredPrompt } = a2HSContext
