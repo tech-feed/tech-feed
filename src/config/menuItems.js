@@ -3,13 +3,16 @@ import {
   AccountBox as AccountBoxIcon,
   ChatBubble,
   ChromeReaderMode,
-  Dashboard as DashboardIcon,
+  Home as HomeIcon,
   ExitToApp as ExitToAppIcon,
   FilterList,
   FormatTextdirectionRToL as RTLIcon,
   FormatTextdirectionLToR as LTRIcon,
   GetApp,
   InfoOutlined,
+  Notifications as NotificationIcon,
+  History as HistoryIcon,
+  Public as ProductionIcon,
   Language as LanguageIcon,
   Lock as LockIcon,
   MenuOpen as MenuOpenIcon,
@@ -102,59 +105,25 @@ const getMenuItems = (props) => {
       value: '/home',
       visible: isAuthorised,
       primaryText: intl.formatMessage({ id: 'home' }),
-      leftIcon: <DashboardIcon />,
+      leftIcon: <HomeIcon />,
     },
     {
-      primaryText: intl.formatMessage({ id: 'demos', defaultMessage: 'Demos' }),
-      primaryTogglesNestedList: true,
-      leftIcon: <Web />,
-      nestedItems: [
-        {
-          value: '/dialog_demo',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'dialog_demo',
-            defaultMessage: 'Dialog',
-          }),
-          leftIcon: <ChatBubble />,
-        },
-        {
-          value: '/toast_demo',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'toast_demo',
-            defaultMessage: 'Toast',
-          }),
-          leftIcon: <QuestionAnswer />,
-        },
-        {
-          value: '/filter_demo',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'filter_demo',
-            defaultMessage: 'Filter',
-          }),
-          leftIcon: <FilterList />,
-        },
-        {
-          value: '/list_page_demo',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'list_page_demo_menu',
-            defaultMessage: 'List Page',
-          }),
-          leftIcon: <ViewList />,
-        },
-        {
-          value: '/tabs_demo',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'tabs_demo',
-            defaultMessage: 'Tabs Page',
-          }),
-          leftIcon: <Tab />,
-        },
-      ],
+      value: '/notifications',
+      visible: isAuthorised,
+      primaryText: "Notificações",
+      leftIcon: <NotificationIcon />,
+    },
+    {
+      value: '/history',
+      visible: isAuthorised,
+      primaryText: "Histórico",
+      leftIcon: <HistoryIcon />,
+    },
+    {
+      value: '/production',
+      visible: isAuthorised,
+      primaryText: "Produção",
+      leftIcon: <ProductionIcon />,
     },
     {
       value: '/about',
@@ -195,13 +164,6 @@ const getMenuItems = (props) => {
           ) : (
             <ChromeReaderMode />
           ),
-        },
-        {
-          onClick: () => {
-            toggleThisTheme('isRTL')
-          },
-          primaryText: `${isRTL ? 'LTR' : 'RTL'} mode`,
-          leftIcon: isRTL ? <LTRIcon /> : <RTLIcon />,
         },
       ],
     },

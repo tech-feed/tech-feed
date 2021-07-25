@@ -23,7 +23,8 @@
     "react-router-dom": "5.x",
     "react-scripts": "4.0.3",
     "react-virtualized-auto-sizer": "1.x",
-    "react-window": "1.x"
+    "react-window": "1.x",
+    "typeface-poppins": "^1.1.13"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -22,7 +22,7 @@ const Menu = (props) => {
   const { appConfig } = useConfig()
   const { setLocale, locale = 'en' } = useLocale()
   const themeContext = useAppTheme()
-
+  
   const menuItems = getMenuItems({
     intl,
     locale,
