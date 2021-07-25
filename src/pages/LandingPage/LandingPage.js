@@ -58,6 +58,7 @@ const useStyles = makeStyles((theme) =>
       display: 'flex',
       backgroundImage: `url(${backImg})`,
       backgroundSize: 'cover',
+      backgroundPosition: 'center',
       height: '100vh',
       width: '100%',
     }, 
@@ -71,9 +72,14 @@ const useStyles = makeStyles((theme) =>
       backgroundColor: 'rgba(0,0,0, 0.3)',
     },
     cta: {
-      padding: '5px 20px',
+      marginTop: '70vh',
+      padding: '3% 10%',
       backgroundColor: '#17706E',
       color: '#FFF',
+    },
+    ctaText: {
+      marginLeft: 20,
+      fontSize: '4vw',
     }
   }),
 );
@@ -109,32 +115,12 @@ const LandingPage = () => {
         <div className={classes.topContent}>
           <Button className={classes.cta}>
             <AddBoxIcon color="#17706E" fontSize="large" />
-            Doe Agora!
+            <p className={classes.ctaText}>Doe Agora!</p>
           </Button>
         </div>
       </div>
 
-      <div>
-        <h1>Tech +feed</h1>
-      </div>
-
-      <div>
-        <h1>Tech +feed</h1>
-      </div>
-      <div>
-        <h1>Tech +feed</h1>
-      </div>
-      <div>
-        <h1>Tech +feed</h1>
-      </div>
-      <div>
-        <h1>Tech +feed</h1>
-      </div>
-      <div>
-        <h1>Tech +feed</h1>
-      </div>
-      
-
+    
       <Drawer anchor='right'
           open={isOpen} 
           onClose={toggleDrawer()}
