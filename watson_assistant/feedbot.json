@@ -1,0 +1,375 @@
+{
+  "intents": [
+    {
+      "intent": "clima",
+      "examples": [
+        {
+          "text": "clima"
+        },
+        {
+          "text": "poderia fornecer informações sobre o tempo?"
+        },
+        {
+          "text": "qual a previsão para hoje?"
+        },
+        {
+          "text": "vai chover?"
+        }
+      ]
+    },
+    {
+      "intent": "pragas",
+      "examples": [
+        {
+          "text": "identificação"
+        },
+        {
+          "text": "identificar"
+        },
+        {
+          "text": "identificar pragas"
+        },
+        {
+          "text": "O que é esse bicho?"
+        },
+        {
+          "text": "pragas"
+        },
+        {
+          "text": "Quero reconhecer uma praga na minha plantação"
+        },
+        {
+          "text": "reconhecimento"
+        },
+        {
+          "text": "reconhecimento pragas"
+        }
+      ],
+      "description": "reconhecimento de pragas"
+    },
+    {
+      "intent": "producao",
+      "examples": [
+        {
+          "text": "acesso"
+        },
+        {
+          "text": "comida"
+        },
+        {
+          "text": "onde consigo coletar comida?"
+        },
+        {
+          "text": "onde pegar alimentos?"
+        },
+        {
+          "text": "ponto de coleta"
+        },
+        {
+          "text": "qual é o ponto de produção mais próximo?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "saudacao",
+      "examples": [
+        {
+          "text": "Boa noite"
+        },
+        {
+          "text": "Boa tarde"
+        },
+        {
+          "text": "Bom dia"
+        },
+        {
+          "text": "Oi"
+        },
+        {
+          "text": "Oiii"
+        },
+        {
+          "text": "Olá"
+        },
+        {
+          "text": "Opa"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "clima",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "clima",
+          "synonyms": [
+            "tempo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "informações sobre o clima",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "previsão do tempo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "saber sobre a chuva",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "vai chover?",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "https://us-south.functions.appdomain.cloud/api/v1/web/76495c7c-db1a-488f-aa20-11de82b2cce1/default/weather_api.json",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá! Como posso te ajudar? "
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#saudacao",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1627142551613",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1627142551628",
+      "previous_sibling": "handler_6_1627142551628"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_4_1627142551613",
+      "event_name": "input",
+      "dialog_node": "handler_6_1627142551628"
+    },
+    {
+      "type": "standard",
+      "title": "Pontos de produção",
+      "output": {
+        "generic": [
+          {
+            "response_type": "channel_transfer",
+            "transfer_info": {
+              "target": {
+                "chat": {
+                  "url": "https://meusite.com/pontos_coleta"
+                }
+              }
+            },
+            "message_to_user": "Para mais informações sobre os pontos de coleta acesso o nosso site:"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_3_1627140776893"
+      },
+      "conditions": "#producao",
+      "dialog_node": "node_10_1627145043647",
+      "previous_sibling": "node_6_1627142397397"
+    },
+    {
+      "type": "standard",
+      "title": "Posso ajudar em algo mais?",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Posso ajudar em algo mais?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "dialog_node": "node_3_1627140776893",
+      "previous_sibling": "node_10_1627145043647"
+    },
+    {
+      "type": "frame",
+      "title": "api weather",
+      "parent": "node_6_1627142397397",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {},
+          "result_variable": "webhook_result_1"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_3_1627140776893"
+      },
+      "conditions": "@clima",
+      "dialog_node": "node_3_1627142420141"
+    },
+    {
+      "type": "standard",
+      "title": "Clima",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Verificando..."
+              },
+              {
+                "text": "Consultando..."
+              },
+              {
+                "text": "Aguarde um pouquinho..."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_3_1627142420141"
+      },
+      "conditions": "#clima",
+      "dialog_node": "node_6_1627142397397",
+      "previous_sibling": "node_7_1627096430039"
+    },
+    {
+      "type": "standard",
+      "title": "Pragas",
+      "output": {
+        "generic": [
+          {
+            "response_type": "channel_transfer",
+            "transfer_info": {
+              "target": {
+                "chat": {
+                  "url": "https://nossosite.com/pragas"
+                }
+              }
+            },
+            "message_to_user": "Ok, acesse este link para ter mais infomações sobre o tema:"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_3_1627140776893"
+      },
+      "conditions": "#pragas",
+      "dialog_node": "node_7_1627096430039",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "A previsão do tempo para hoje é de $webhook_result_1.narrative Máxima de $webhook_result_1.calendarDayTemperatureMax ºC . Umidade relativa: $webhook_result_1.relativeHumidity %"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1627142420141",
+      "conditions": "$webhook_result_1",
+      "dialog_node": "response_10_1627142551229",
+      "previous_sibling": "slot_4_1627142551613"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Erro ao consultar"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1627142420141",
+      "conditions": "anything_else",
+      "dialog_node": "response_5_1627142552445",
+      "previous_sibling": "response_10_1627142551229"
+    },
+    {
+      "type": "slot",
+      "parent": "node_3_1627142420141",
+      "dialog_node": "slot_4_1627142551613"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "deteccao-pragas",
+  "language": "pt-br",
+  "description": ""
+}
