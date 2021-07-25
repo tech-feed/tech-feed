@@ -5,8 +5,11 @@ import { useIntl } from 'react-intl'
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import { Link } from 'react-router-dom'
+import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
 import 'typeface-poppins'
+import banner_crono from './cronograma.png'
+import banner_tempo from './tempo.png'
+import banner_id from './id.png'
 
 const classes_button = makeStyles({
   root: {
@@ -24,12 +27,11 @@ const classes_button = makeStyles({
   },
   agua: {
     fontFamily: 'Poppins',
+    fontSize: '24px',
     background: '#17706E',
-    borderRadius: 5,
-    border: 0,
     color: 'white',
     height: 84,
-    width: 142,
+    width: 320,
     boxShadow: '0 3px 5px 2px rgba(0, 0, 0, 0.3)',
     "&:hover": {
       backgroundColor: "#17706E"
@@ -92,34 +94,22 @@ const HomePage = () => {
       <Scrollbar
         style={{ height: '100%', width: '100%', display: 'flex', flex: 1, padding: 10 }}
       >
-        <div style={{ hover:'none', height: '70%', width: '100%', display: 'flex', flex: 1, padding: '5%' }}>
-        <Grid container spacing={3}>
+        <div style={{ hover:'none', height: '90%', width: '100%', display: 'flex', flex: 1, padding: '5%' }}>
+        <Grid container spacing={1}>
+        <Grid item xs>
+        <img src={banner_id} alt="Apresentacao" width="320px"></img>
+        </Grid>
+        <Grid item xs>
+        <img src={banner_tempo} alt="Previsão do tempo" width="320px"></img>
+        </Grid>
         <Grid item xs={12}>
-        <Button classes={{root: classes.message,label: classes.label,}}>Bom dia, seu João, acompanhe aqui os dados da sua plantação em tempo real!</Button>
+        <img src={banner_crono} alt="Cronograma" width="320px"></img> 
         </Grid>
-        <Grid item xs>
-        <Button classes={{root: classes.root,label: classes.label,}}>PERCENTUAL DO TANQUE</Button>
-        </Grid>
-        <Grid item xs>
-        <Button classes={{root: classes.outros,label: classes.label,}}>Histórico</Button>
-        </Grid>
-        <Grid item xs>
-        <Button classes={{root: classes.sais,label: classes.label,}}>SAIS MINERAIS</Button>
-        </Grid>
-        <Grid item xs>
-        <Button classes={{root: classes.outros,label: classes.label,}}>Sua Produção</Button>
-        </Grid>
-        <Grid item xs>
-        <Button classes={{root: classes.pragas,label: classes.label,}}>QUANTIDADE DE ÁGUA</Button>
-        </Grid>
-        <Grid item xs>
-        <Button classes={{root: classes.outros,label: classes.label,}}>Serviços Contratados</Button>
-        </Grid>
-        <Grid item xs>
-        <Button classes={{root: classes.agua,label: classes.label,}}><Link to="/upload_pragas" style={{ textDecoration: 'none', color: 'white' }}>CONTROLE DE PRAGAS</Link></Button>
-        </Grid>
-        <Grid item xs>
-        <Button classes={{root: classes.outros,label: classes.label,}}>Cadastre Alimentos</Button>
+        <Grid item xs={12}>
+        <Button classes={{root: classes.agua,label: classes.label,}}>
+          <AddAPhotoIcon color="white" fontSize="large"/>
+          Identificar Praga
+        </Button>
         </Grid>
         </Grid>
 

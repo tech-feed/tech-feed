@@ -68,7 +68,7 @@ const MyAccount = () => {
     <Page
       pageTitle={intl.formatMessage({
         id: 'my_account',
-        defaultMessage: 'My Account',
+        defaultMessage: 'Minha Conta',
       })}
     >
       <div
