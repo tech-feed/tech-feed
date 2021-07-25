@@ -9,11 +9,11 @@ _____________________________________________________
 
 📢 Diferenciais:
 
-- Simplicidade de implementação
-- Escalável
-- Redução de custos
-- Aumento da produtividade
-- Otimização de recursos
+- Simplicidade de implementação;
+- Escalável;
+- Redução de custos;
+- Aumento da produtividade;
+- Otimização de recursos.
 
 💡 Como funciona:
 
