@@ -1,6 +1,17 @@
 {
   "intents": [
     {
+      "intent": "central",
+      "examples": [
+        {
+          "text": "falar com um agente"
+        },
+        {
+          "text": "Preciso de ajuda presencial!"
+        }
+      ]
+    },
+    {
       "intent": "clima",
       "examples": [
         {
@@ -219,7 +230,10 @@
           {
             "values": [
               {
-                "text": "Posso ajudar em algo mais?"
+                "text": "Posso ajudar em algo mais na sua plantação?"
+              },
+              {
+                "text": ""
               }
             ],
             "response_type": "text",
@@ -228,7 +242,7 @@
         ]
       },
       "dialog_node": "node_3_1627140776893",
-      "previous_sibling": "node_10_1627145043647"
+      "previous_sibling": "node_3_1627225210979"
     },
     {
       "type": "frame",
@@ -254,6 +268,26 @@
       },
       "conditions": "@clima",
       "dialog_node": "node_3_1627142420141"
+    },
+    {
+      "type": "standard",
+      "title": "Conectar com a central",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Entendi, em breve entraremos em contato!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#central",
+      "dialog_node": "node_3_1627225210979",
+      "previous_sibling": "node_10_1627145043647"
     },
     {
       "type": "standard",
