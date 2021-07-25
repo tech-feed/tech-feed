@@ -1,7 +1,7 @@
 <img alt="logo" src="https://cdn.discordapp.com/attachments/866464902898384907/868626927970320414/logo_naice.png"  width=20%%/>
-#### Gerando autonomia para comunidades
+### Gerando autonomia para comunidades
 
-######Projeto desenvolvido para o desafio Fome Zero do Call For Code 2021
+#### Projeto desenvolvido para o desafio Fome Zero do Call For Code 2021
 _____________________________________________________
 
 🎯 Objetivo: Dar autonomia para comunidades criando agricultores sustentáveis.
