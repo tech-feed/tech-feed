@@ -17,7 +17,7 @@ _____________________________________________________
 
 💡 Como funciona:
 
-<img alt="fluxo" src="https://media.discordapp.net/attachments/867195120340041738/868710811173007402/unknown.png"  width=200%%/>
+<img alt="fluxo" src="https://media.discordapp.net/attachments/867195120340041738/868710811173007402/unknown.png"  width=100%%/>
 
 🚀 Vamos começar!
 
@@ -36,7 +36,7 @@ _____________________________________________________
  - Acesse o preview do <a href="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=eu-de&integrationID=ca82185b-7356-487e-a583-e2935c0d8dee&serviceInstanceID=4f00b77f-ce96-42ff-942f-9fcf9d6ac98d">feedBOT</a>
 
 
-   <img alt="logo" src="https://media.discordapp.net/attachments/867195120340041738/868694663383621652/unknown.png?width=363&height=472" width=70%%/>
+   <img alt="logo" src="https://media.discordapp.net/attachments/867195120340041738/868694663383621652/unknown.png?width=363&height=472" width=50%%/>
 
 
 ⚙ Tecnologias:
