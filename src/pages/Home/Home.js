@@ -5,6 +5,7 @@ import { useIntl } from 'react-intl'
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import { Link } from 'react-router-dom'
 import 'typeface-poppins'
 
 const classes_button = makeStyles({
@@ -115,7 +116,7 @@ const HomePage = () => {
         <Button classes={{root: classes.outros,label: classes.label,}}>Serviços Contratados</Button>
         </Grid>
         <Grid item xs>
-        <Button classes={{root: classes.agua,label: classes.label,}}>CONTROLE DE PRAGAS</Button>
+        <Button classes={{root: classes.agua,label: classes.label,}}><Link to="/upload_pragas" style={{ textDecoration: 'none', color: 'white' }}>CONTROLE DE PRAGAS</Link></Button>
         </Grid>
         <Grid item xs>
         <Button classes={{root: classes.outros,label: classes.label,}}>Cadastre Alimentos</Button>

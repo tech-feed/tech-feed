@@ -17,7 +17,7 @@ _____________________________________________________
 
 💡 Como funciona:
 
-<img alt="fluxo" src="https://media.discordapp.net/attachments/867195120340041738/868712192730607646/fluxo.png"  width=100%%/>
+<img alt="fluxo" src="https://cdn.discordapp.com/attachments/867195120340041738/868728621156683816/unknown.png"  width=100%%/>
 
 🚀 Vamos começar!
 
