@@ -108,7 +108,7 @@ const HomePage = () => {
         <Grid item xs={12}>
         <Button classes={{root: classes.agua,label: classes.label,}}>
           <AddAPhotoIcon color="white" fontSize="large"/>
-          Identificar Praga
+          &nbsp;&nbsp;&nbsp;&nbsp;Identificar Praga
         </Button>
         </Grid>
         </Grid>
