@@ -43,35 +43,10 @@ _____________________________________________________
 
 - <a href="https://reactjs.org/">React JS</a> 
 - <a href="https://material-ui.com/pt/">Material UI</a>
-- <a href="https://developer.ibm.com/blogs/call-for-code-the-weather-company-and-you/">The Weather APi</a>
+- <a href="https://developer.ibm.com/blogs/call-for-code-the-weather-company-and-you/">The Weather API</a>
 - <a href="https://www.ibm.com/br-pt/cloud/watson-assistant">IBM Watson Assistant</a>
 
 
  💪 Time:
 
- - Bernardo Raposo | <b>Negócios</b>
-
-   <img alt="Leandro" src="https://media.discordapp.net/attachments/866488441655263253/868681498763603968/BR_1.jpg?width=315&height=473"  width=20%%/>
- 
-
- - Gabriel Fernandez | UX Designer | Film Maker
-
-    <img alt="Leandro" src="https://media.discordapp.net/attachments/866491238591758336/868681477888573510/223830258_221793609840292_4904370945815383683_n.jpg"  width=30%%/>
- 
- - Leandro Ramalho | Desenvolvedor 
-
-    <img alt="Leandro" src="https://media.discordapp.net/attachments/865960997600493579/868681931087282237/unknown.png"  width=20%%/>
-
- - Raiane Lima | Desenvolvedora
-
-    <img alt="Leandro" src="https://media.discordapp.net/attachments/866488441655263253/868682990564302900/124698236_178036784029911_9121402771597815012_n.jpg?width=473&height=473"  width=20%%/>
-
- - Vinicius Passos | Desenvolvedor
-
-   <img alt="Leandro" src="https://media.discordapp.net/attachments/867195120340041738/868687878220283944/IMG_6967_2_q.jpg?width=473&height=473"  width=20%%/>
-
-
-
-
-
-
+ <img alt="Leandro" src="https://cdn.discordapp.com/attachments/867195120340041738/868730515027554384/unknown.png"  width=100%%/>
