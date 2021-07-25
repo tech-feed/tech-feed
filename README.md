@@ -41,6 +41,7 @@ _____________________________________________________
 
  - Vinicius Passos | Desenvolvedor
 
+   <img alt="Leandro" src="https://media.discordapp.net/attachments/867195120340041738/868687878220283944/IMG_6967_2_q.jpg?width=473&height=473"  width=20%%/>
 
 
 
