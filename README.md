@@ -49,4 +49,4 @@ _____________________________________________________
 
  💪 Time:
 
- <img alt="Leandro" src="https://cdn.discordapp.com/attachments/867195120340041738/868730888341569536/unknown.png"  width=100%%/>
+ <img alt="Leandro" src="https://cdn.discordapp.com/attachments/867195120340041738/868854738463125504/unknown.png"  width=100%%/>
