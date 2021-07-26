@@ -34,7 +34,7 @@ _____________________________________________________
  > sudo npm start
 
  
- 🤖 Chico, nosso assistente inteligente!
+ 🤖 Chico, o nosso assistente inteligente!
 
    <img alt="logo" src="https://cdn.discordapp.com/attachments/867195120340041738/869008702353588254/unknown.png" width=50%%/>
 
@@ -49,4 +49,4 @@ _____________________________________________________
 
  💪 Time:
 
- <img alt="Leandro" src="https://cdn.discordapp.com/attachments/867195120340041738/868854738463125504/unknown.png"  width=100%%/>
+ <img alt="Leandro" src="https://cdn.discordapp.com/attachments/867195120340041738/869009385026912276/unknown.png"  width=100%%/>
