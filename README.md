@@ -33,10 +33,10 @@ _____________________________________________________
  - Iniciar o servidor:
  > sudo npm start
 
- - Acesse o preview do <a href="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=eu-de&integrationID=ca82185b-7356-487e-a583-e2935c0d8dee&serviceInstanceID=4f00b77f-ce96-42ff-942f-9fcf9d6ac98d">feedBOT</a>
+ 
+ 🤖 Chico, nosso assistente inteligente!
 
-
-   <img alt="logo" src="https://media.discordapp.net/attachments/867195120340041738/868694663383621652/unknown.png?width=363&height=472" width=50%%/>
+   <img alt="logo" src="https://cdn.discordapp.com/attachments/867195120340041738/869008702353588254/unknown.png" width=50%%/>
 
 
 ⚙ Tecnologias:
